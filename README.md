@@ -19,3 +19,14 @@ Task 3: Made function for getting file blocks and another function for displayin
 Task 4: Made function for appending and overwriting, limited to 12 direct blocks.
         For appending, made an allocater function for allocating space.
         Overwriting function only overwrites the given bits, others remain intact.
+
+How to run:
+Instantiate an object of class Ext2Driver
+Use .mount to mount the file to be read (take input for function as file name)
+.displayMetadata for task 1
+.printTree for task 2
+Create a 32 bit integer variable and store a particular target inode value (in this case 12,15 or 16)
+use .displayFileContent(inode number) for viewing text files
+Use .saveFileToDisk(inode number, "filename.extension") to store other types of files in filename.extension stored locally
+Use .appendToFile(inode number, "text to be appended") to append text
+Use . overwriteFile(inode number, byte offset, "text to be overwritten") to overwrite bytes starting after byte offset (doesn't overwrite bytes after that)
